@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { getItems } from "../../actions/articleActions";
 import Logout from "../auth/Logout";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -30,7 +31,7 @@ class Header extends Component {
       <Navbar collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand>
-            <Link to="/">MODEUM</Link>
+            <Link to="/" onClick={this.props.getItems}>MODEUM</Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -65,4 +66,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps, {getItems})(Header);

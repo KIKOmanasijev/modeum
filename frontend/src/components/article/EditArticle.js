@@ -73,7 +73,7 @@ class EditArticle extends Component {
                 value={this.props.singleArticle.content}
               />
 
-              <label for="category">Choose a category:</label>
+              <label htmlFor="category">Choose a category:</label>
 
               <select
                 id="category"

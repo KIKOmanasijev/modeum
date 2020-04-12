@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createArticle2 } from '../../actions/articleActions';
 import Swal from "sweetalert2";
-import { Redirect } from 'react-router-dom';
 
 class WriteArticle extends Component {
     state = {
@@ -25,7 +24,6 @@ class WriteArticle extends Component {
             imageUrl,
             category,
             id: this.props.user.id,
-            category: "UX",
         }
 
         if (title === "" || content === "" || imageUrl === ""){

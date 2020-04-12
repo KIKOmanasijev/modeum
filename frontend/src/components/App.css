@@ -240,4 +240,12 @@ body {
   .categoryList button {
     margin-right: 10px !important;
   }
+
+  .commentWrite .form-control {
+    width: 100% !important;
+  }
+
+  .commentButton {
+    width: 100% !important;
+  }
 }
